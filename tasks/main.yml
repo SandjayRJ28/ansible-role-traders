@@ -1,0 +1,10 @@
+---
+- name: Include variables
+  include_vars: main.yml
+
+- name: Install Bloomberg Terminal https://bdn-ak-ssl.bloomberg.com/software/trv/sotrt05072020.exe
+  win_package:
+    path: https://bdn-ak-ssl.bloomberg.com/software/trv/sotrt05072020.exe
+    state: present
+    arguments: /install /passive /norestart
+...
