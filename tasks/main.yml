@@ -5,8 +5,8 @@
 - name: Download Bloomberg Terminal
   win_get_url:
     url: https://bdn-ak-ssl.bloomberg.com/software/trv/sotrt05072020.exe
-    dest: 'c:\temp\sotrt05072020.exe'
+    dest: 'C:\Scripts\sotrt05072020.exe'
 
 - name: Install Bloomberg Terminal
-  raw: 'c:\temp\sotrt05072020.exe /Quiet /NoRestart /Full'
+  raw: 'C:\Scripts\sotrt05072020.exe /Quiet /NoRestart /Full'
 ...
