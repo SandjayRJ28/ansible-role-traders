@@ -2,11 +2,16 @@
 - name: Include variables
   include_vars: main.yml
 
-- name: Download Bloomberg Terminal
-  win_get_url:
-    url: https://bdn-ak-ssl.bloomberg.com/software/trv/sotrt05072020.exe
-    dest: 'C:\Scripts\sotrt05072020.exe'
+# - name: Download Bloomberg Terminal
+#   win_get_url:
+#     url: https://bdn-ak-ssl.bloomberg.com/software/trv/sotrt05072020.exe
+#     dest: 'C:\Scripts\sotrt05072020.exe'
 
 - name: Install Bloomberg Terminal
-  raw: 'C:\Scripts\sotrt05072020.exe /Quiet /NoRestart /Full'
+  # raw: 'C:\Scripts\sotrt05072020.exe /Quiet /NoRestart /Full'
+  win_package:
+    path: C:\Scripts\sotrt05072020.exe
+    product_id: WOW6432Node
+    arguments: /S
+    state: absent
 ...
